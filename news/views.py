@@ -20,4 +20,9 @@ def yangilik(request, id):
         return HttpResponse(ls[id-1])
     else:
         return HttpResponse("Bunday yangilik hali mavjud emas")
+def shartli(request, son):
+    context = {
+        'son': son
+    }
+    return render(request, "news/shart.html", context)
     

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Yangiliklar Bosh Sahifa</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        .news { border: 1px solid #ccc; padding: 16px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    {% if son < 100 %}
+    <div class="news" id="1">
+        <h2>Birinchi yangilik</h2>
+        <p>Bu birinchi yangilik matni. Bugun muhim voqea sodir bo‘ldi.</p>
+    </div>
+
+    {% elif son == 100 %}
+    <div class="news" id="2">
+        <h2>Ikkinchi yangilik</h2>
+        <p>Bu ikkinchi yangilik. Texnologiya sohasida katta yangiliklar bor.</p>
+    </div>
+
+    {% else %}
+    <div class="news" id="3">
+        <h2>Uchinchi yangilik</h2>
+        <p>Bu uchinchi yangilik. Sport olamidagi so‘nggi xabarlar.</p>
+    </div>
+
+    {% endif %}
+
+</body>
+</html>
