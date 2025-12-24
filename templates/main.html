@@ -8,14 +8,16 @@
         </style>
         </head>
         <body>
-            <h1> Header </h1>
+        {% include "header.html" %}
 
-            {% block content %}
-
-            {% endblock %}
-
-            <p> Footer </p>
+        {% block content %}
 
 
+
+
+        {% endblock %}
+
+
+        {% include "footer.html" %}
         </body>
     </html> 
