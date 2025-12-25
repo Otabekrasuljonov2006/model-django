@@ -2,7 +2,7 @@
 
 
 {% block content %}
-
+<a href="{% url 'project_add' %}">Yangi loyiha qo'shish</a>
 <h2>Ijobiy baho berilgan loyihalar</h2>
 
 <table cellpadding="10">
@@ -12,6 +12,8 @@
         <th>Ovozlar nisbati</th>
         <th>Sanasi</th>
         <th></th>
+        <th></th>
+        <th></th>
     </tr>
     {% for review in reviews_p %}
     <tr>
@@ -20,6 +22,8 @@
         <td>{{ review.project.vote_ratio }}</td>
         <td>{{ review.project.created }}</td>
         <th><a href = "{% url 'project' review.project.id %}">Ko'rish</a></th>
+        <th><a href = "{% url 'project_edit' review.project.id %}">Tahrirlash</a></th>
+        <th><a href = "{% url 'project_delete' review.project.id %}">O'chirish</a></th>
 
     </tr>
     {% endfor %}
